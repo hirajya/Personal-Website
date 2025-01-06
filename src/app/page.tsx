@@ -17,11 +17,11 @@ export default function Home() {
               <p className="text-lg mt-4 max-w-2xl">
                 This website is your gateway to discovering the most incredible
                 destinations across the globe. From hidden gems to iconic
-                landmarks, we'll take you on a journey to places that inspire
-                curiosity and wanderlust. Whether you’re looking for tranquil
+                landmarks, we&apos;ll take you on a journey to places that inspire
+                curiosity and wanderlust. Whether you&apos;re looking for tranquil
                 retreats or thrilling adventures, this platform will showcase
                 the dream destinations I hope to explore. Join me in exploring
-                the endless beauty our world has to offer—where every place
+                the endless beauty our world has to offer&mdash;where every place
                 tells a story and every adventure leaves a lasting impression.
               </p>
               <a
