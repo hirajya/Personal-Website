@@ -12,6 +12,13 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      backgroundImage: {
+        bannerImg: "url('/background-pic.jpg')", // Replace with your image path
+        blackOverlay: "linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%)",
+      },
+      fontFamily: {
+        poppins: ["var(--font-poppins)"],
+      },
     },
   },
   plugins: [],
