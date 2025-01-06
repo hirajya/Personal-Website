@@ -1,4 +1,3 @@
-import Image from "next/image";
 import ScenicNavbar from "@/components/Navbar";
 
 export default function Home() {
