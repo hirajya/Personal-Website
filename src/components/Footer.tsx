@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -6,22 +7,22 @@ const Footer = () => {
       <div className="container mx-auto px-4 flex flex-col items-center">
         {/* Social Links */}
         <div className="flex space-x-6 mb-4">
-          <a
+          <Link
             href="https://www.linkedin.com/in/rodneyleiestrada/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-500 hover:text-blue-400"
           >
             LinkedIn
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://github.com/hirajya"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-300 hover:text-gray-400"
           >
             GitHub
-          </a>
+          </Link>
         </div>
 
         {/* All Rights Reserved */}
