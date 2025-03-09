@@ -1,10 +1,9 @@
-import ScenicNavbar from "@/components/Navbar";
+import ScenicNavbar from "@/components/Navbar/NavbarMain";
 
 export default function Home() {
   return (
     <div>
       <section className="bg-bannerImg bg-repeat bg-cover bg-bottom">
-        <ScenicNavbar />
         <div className="w-full h-screen flex items-center justify-center bg-blackOverlay">
           <div className="text-white text-left w-full px-8 ml-36">
             <div className="container mx-auto mb-40">
