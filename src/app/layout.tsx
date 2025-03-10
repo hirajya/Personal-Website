@@ -19,7 +19,7 @@ export default function RootLayout({
       <head>
         <title>RLDE</title>
         <meta name="description" content="Personal Website of Rodney Lei Estrada" />
-        <link rel="icon" href="/LogoWhite.svg" type="image/svg+xml" />
+        <link rel="icon" href="/Logo_White.svg" type="image/svg+xml" />
       </head>
       <body className={poppins}>
         <NavbarWrapper /> {/* Apply the wrapper here */}
