@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function page() {
   return (
-    <div>Projects</div>
+    <div className='h-[100vh]'>Projects</div>
   )
 }
