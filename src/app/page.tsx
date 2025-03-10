@@ -22,7 +22,7 @@ export default function Home() {
                 tells a story and every adventure leaves a lasting impression.
               </p>
               <a
-                href="/places"
+                href="/about"
                 className="bg-green-600 text-white uppercase font-semibold px-6 py-3 rounded-md transition-all inline-block hover:scale-105 mt-6"
               >
                 Get Started
