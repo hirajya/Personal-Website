@@ -1,5 +1,3 @@
-import ScenicNavbar from "@/components/Navbar/NavbarMain";
-
 export default function Home() {
   return (
     <div>
