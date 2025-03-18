@@ -8,7 +8,7 @@ export default function Home() {
       {/* Hero Section with Background Image */}
       <section className="bg-bannerImg bg-repeat bg-cover bg-[center_80%] h-[50vh] flex items-center justify-center">
         <div className="w-full h-full flex items-center justify-center bg-blackOverlay">
-          <div className="text-white text-left w-full px-8 md:px-16 lg:px-32 xl:px-64">
+          <div className="text-white text-left w-full px-8 md:px-16 lg:px-32 xl:px-64 xl:ml-44">
             <div className="container mx-auto">
               <p className="font-semibold text-white text-2xl">This is</p>
               <h1 className="text-6xl font-bold">Rodney Lei Estrada.</h1>
