@@ -1,6 +1,5 @@
 import { inter } from "@/utils/fonts";
-import Link from "next/link";
-import { Mail, Linkedin, Github, Menu, X } from "lucide-react"; // Added Menu and X icons
+import { Linkedin, Github } from "lucide-react"; // Added Menu and X icons
 
 
 export default function Home() {
