@@ -92,7 +92,7 @@ export default function Home() {
               style={{ fontFamily: "var(--font-inter)" }}
               className="text-md py-6 max-w-2xl"
             >
-              I'm passionate about learning and lifelong growth, and I love
+              I&apos;m passionate about learning and lifelong growth, and I love
               sharing knowledge and connecting with people through tech meetups
               and communities. Being part of these spaces has helped me grow,
               and now, I want to give back by contributing and helping others on
