@@ -45,7 +45,7 @@ const UniformNavbar = () => {
             { href: "/", label: "HOME" },
             { href: "/about", label: "ABOUT ME" },
             { href: "/projects", label: "PROJECTS" },
-            { href: "/experience", label: "EXPERIENCE" },
+            { href: "/hackathons", label: "HACKATHONS" },
           ].map(({ href, label }) => (
             <li key={href}>
               {pathname === href ? (
@@ -98,7 +98,7 @@ const UniformNavbar = () => {
               { href: "/", label: "HOME" },
               { href: "/about", label: "ABOUT ME" },
               { href: "/projects", label: "PROJECTS" },
-              { href: "/experience", label: "EXPERIENCE" },
+              { href: "/hackathons", label: "HACKATHONS" },
             ].map(({ href, label }) => (
               <li key={href} className="py-2">
                 {pathname === href ? (
