@@ -5,6 +5,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Default font */
+  --font-poppins: 'Poppins', sans-serif;
+  --font-inter: 'Inter', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,5 +21,10 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-poppins); /* Use the imported Poppins font as default */
+}
+
+/* Class to explicitly use Inter font */
+.font-inter {
+  font-family: var(--font-inter);
 }

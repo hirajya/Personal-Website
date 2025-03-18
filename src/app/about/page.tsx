@@ -11,7 +11,7 @@ export default function Page() {
           className="object-cover"
           quality={100}
         />
-        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
+        <div className="absolute inset-0 flex items-center justify-center text-center px-8 md:px-16 lg:px-32 xl:px-64 bg-black bg-opacity-50">
           <h1 className="text-white text-5xl font-bold">About Me, Lei</h1>
         </div>
       </div>
