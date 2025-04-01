@@ -5,7 +5,7 @@ export default function Page() {
     <div>
       <div className="relative w-full h-[300px]">
         <Image
-          src="/AboutMeBg.jpg"
+          src="/AboutMe/aboutMePic.jpg"
           alt="Header Image"
           fill
           className="object-cover"
