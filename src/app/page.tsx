@@ -43,13 +43,13 @@ export default function Home() {
       <section className="bg-[#F8F8FF] py-12">
         <div className="container mx-auto px-8 md:px-16 lg:px-32 xl:px-64">
           <p className="font-semibold text-black text-2xl">I&apos;m a</p>
-          <p style={{ fontFamily: 'var(--font-inter)' }} className="text-md mt-4 max-w-2xl">
+          <p style={{ fontFamily: 'var(--font-inter)' }} className="text-md mt-4 max-w-2xl text-[#313638]">
             - Retail Tech Intern at{" "}
             <a
               href="https://careers.ing.com/en/about-ing"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-900 underline hover:underline hover:font-semibold"
+              className="text-gray-900 underline hover:underline hover:font-semibold text-[#313638]"
             >
               ING Hubs Philippines
             </a>
@@ -58,7 +58,7 @@ export default function Home() {
               href="https://pycon-apac.python.ph/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-900 underline hover:underline hover:font-semibold"
+              className="text-gray-900 underline hover:underline hover:font-semibold text-[#313638]"
             >
               PyCon
             </a>{" "}
@@ -67,7 +67,7 @@ export default function Home() {
               href="https://python.ph/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-900 underline hover:underline hover:font-semibold"
+              className="text-gray-900 underline hover:underline hover:font-semibold text-[#313638]"
             >
               Python Philippines
             </a>{" "}
@@ -76,7 +76,7 @@ export default function Home() {
               href="https://national-u.edu.ph/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-900 underline hover:underline hover:font-semibold"
+              className="text-gray-900 underline hover:underline hover:font-semibold text-[#313638]"
             >
               National University - Manila
             </a>
@@ -90,7 +90,7 @@ export default function Home() {
           <div className={`${inter}`}>
             <p
               style={{ fontFamily: "var(--font-inter)" }}
-              className="text-md py-6 max-w-2xl"
+              className="text-md py-6 max-w-2xl text-[#313638]"
             >
               I&apos;m passionate about learning and lifelong growth, and I love
               sharing knowledge and connecting with people through tech meetups
