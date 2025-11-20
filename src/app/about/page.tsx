@@ -23,8 +23,6 @@ import {
 } from "lucide-react";
 
 export default function Page() {
-  const [activeSection, setActiveSection] = React.useState<string | null>(null);
-
   return (
     <div className="min-h-screen bg-gray-900">
       {/* Animated Background Pattern */}
@@ -167,8 +165,6 @@ export default function Page() {
 
           <div 
             className="group bg-gray-50 border border-gray-200 p-8 hover:shadow-xl hover:border-gray-400 transition-all duration-300"
-            onMouseEnter={() => setActiveSection("experience")}
-            onMouseLeave={() => setActiveSection(null)}
           >
             <div className="flex items-start gap-6">
               <div className="flex-shrink-0">
@@ -232,8 +228,6 @@ export default function Page() {
             {/* National University */}
             <div 
               className="group bg-gray-800/50 border border-gray-700 p-8 hover:border-gray-500 hover:bg-gray-800/70 transition-all duration-300"
-              onMouseEnter={() => setActiveSection("education-nu")}
-              onMouseLeave={() => setActiveSection(null)}
             >
               <div className="flex items-start gap-6">
                 <div className="flex-shrink-0">
@@ -345,42 +339,59 @@ export default function Page() {
           <div className="space-y-8">
             {/* PyCon APAC */}
             <div className="group bg-gradient-to-r from-red-50 to-pink-50 border border-red-200 p-8 hover:shadow-xl hover:border-red-400 transition-all duration-300 transform hover:-translate-y-1">
-              <div className="flex items-start gap-6">
-                <div className="flex-shrink-0">
-                  <div className="w-16 h-16 bg-red-600/20 border border-red-600 rounded-none flex items-center justify-center group-hover:bg-red-600/30 transition-colors duration-300">
-                    <Award className="w-8 h-8 text-red-600" />
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+                <div className="lg:col-span-8">
+                  <div className="flex items-start gap-6">
+                    <div className="flex-shrink-0">
+                      <div className="w-16 h-16 bg-red-600/20 border border-red-600 rounded-none flex items-center justify-center group-hover:bg-red-600/30 transition-colors duration-300">
+                        <Award className="w-8 h-8 text-red-600" />
+                      </div>
+                    </div>
+                    
+                    <div className="flex-grow">
+                      <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                        <div>
+                          <h3 className="text-2xl font-bold text-gray-900 mb-1">PyCon APAC (Asia-Pacific) 2025</h3>
+                          <h4 className="text-xl font-semibold text-red-600 mb-2">PyCon Chairman</h4>
+                        </div>
+                        <span className="text-gray-500 flex items-center font-mono text-sm">
+                          <Calendar className="mr-2" size={16} />
+                          October 2024 - March 2025
+                        </span>
+                      </div>
+                      
+                      <p className={`${inter} text-gray-700 leading-relaxed mb-4`}>
+                        PyCon is an annual event, and Python Conference Asia-Pacific
+                        (PyCon APAC 2025) is hosted by the Philippines, transitioning
+                        from PyCon PH to PyCon APAC this year. Serving as
+                        chairman/project manager overseeing all committees for the
+                        success and execution of the event.
+                      </p>
+                      
+                      <div className="flex flex-wrap gap-2">
+                        {["Event Management", "Team Leadership", "Project Management", "Community Building"].map((skill) => (
+                          <span
+                            key={skill}
+                            className="px-3 py-1 bg-red-100 text-red-800 text-sm font-mono"
+                          >
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
                 
-                <div className="flex-grow">
-                  <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
-                    <div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-1">PyCon APAC (Asia-Pacific) 2025</h3>
-                      <h4 className="text-xl font-semibold text-red-600 mb-2">PyCon Chairman</h4>
-                    </div>
-                    <span className="text-gray-500 flex items-center font-mono text-sm">
-                      <Calendar className="mr-2" size={16} />
-                      October 2024 - March 2025
-                    </span>
-                  </div>
-                  
-                  <p className={`${inter} text-gray-700 leading-relaxed mb-4`}>
-                    PyCon is an annual event, and Python Conference Asia-Pacific
-                    (PyCon APAC 2025) is hosted by the Philippines, transitioning
-                    from PyCon PH to PyCon APAC this year. Serving as
-                    chairman/project manager overseeing all committees for the
-                    success and execution of the event.
-                  </p>
-                  
-                  <div className="flex flex-wrap gap-2">
-                    {["Event Management", "Team Leadership", "Project Management", "Community Building"].map((skill) => (
-                      <span
-                        key={skill}
-                        className="px-3 py-1 bg-red-100 text-red-800 text-sm font-mono"
-                      >
-                        {skill}
-                      </span>
-                    ))}
+                <div className="lg:col-span-4">
+                  <div className="relative aspect-[4/3] overflow-hidden bg-gray-100 border border-red-200 group-hover:border-red-300 transition-colors duration-300">
+                    <Image
+                      src="/Leadership/pycon-apac.jpg"
+                      alt="PyCon APAC 2025 - Lei as Chairman"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 768px) 100vw, 400px"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-red-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                 </div>
               </div>
@@ -388,35 +399,52 @@ export default function Page() {
 
             {/* Python Philippines */}
             <div className="group bg-gradient-to-r from-yellow-50 to-orange-50 border border-yellow-200 p-8 hover:shadow-xl hover:border-yellow-400 transition-all duration-300 transform hover:-translate-y-1">
-              <div className="flex items-start gap-6">
-                <div className="flex-shrink-0">
-                  <div className="w-16 h-16 bg-yellow-600/20 border border-yellow-600 rounded-none flex items-center justify-center group-hover:bg-yellow-600/30 transition-colors duration-300">
-                    <Users className="w-8 h-8 text-yellow-600" />
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+                <div className="lg:col-span-4 lg:order-2">
+                  <div className="relative aspect-[4/3] overflow-hidden bg-gray-100 border border-yellow-200 group-hover:border-yellow-300 transition-colors duration-300">
+                    <Image
+                      src="/Leadership/python-philippines.jpg"
+                      alt="Python Philippines Community - Lei as Board Secretary"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 768px) 100vw, 400px"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-yellow-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                 </div>
                 
-                <div className="flex-grow">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Python Philippines</h3>
-                  
-                  <div className="space-y-4">
-                    <div className="border-l-4 border-yellow-500 pl-4">
-                      <h4 className="text-lg font-semibold text-yellow-600 mb-2">Board of Trustees | Secretary</h4>
-                      <p className="text-gray-700 text-sm mb-2">May 2025 - Present</p>
-                      <p className={`${inter} text-gray-700 text-sm leading-relaxed`}>
-                        Supporting strategic planning efforts. Oversees board
-                        documentation, records meeting minutes, and handles the
-                        signing of official documents.
-                      </p>
+                <div className="lg:col-span-8 lg:order-1">
+                  <div className="flex items-start gap-6">
+                    <div className="flex-shrink-0">
+                      <div className="w-16 h-16 bg-yellow-600/20 border border-yellow-600 rounded-none flex items-center justify-center group-hover:bg-yellow-600/30 transition-colors duration-300">
+                        <Users className="w-8 h-8 text-yellow-600" />
+                      </div>
                     </div>
                     
-                    <div className="border-l-4 border-yellow-500 pl-4">
-                      <h4 className="text-lg font-semibold text-yellow-600 mb-2">Core Volunteer</h4>
-                      <p className="text-gray-700 text-sm mb-2">December 2022 - Present</p>
-                      <p className={`${inter} text-gray-700 text-sm leading-relaxed`}>
-                        Part of the main and core volunteer handling successful and free tech meetups
-                        and online sessions for everyone. Serving as committee lead for
-                        consecutive years of PyCon 2023 & 2024.
-                      </p>
+                    <div className="flex-grow">
+                      <h3 className="text-2xl font-bold text-gray-900 mb-4">Python Philippines</h3>
+                      
+                      <div className="space-y-4">
+                        <div className="border-l-4 border-yellow-500 pl-4">
+                          <h4 className="text-lg font-semibold text-yellow-600 mb-2">Board of Trustees | Secretary</h4>
+                          <p className="text-gray-700 text-sm mb-2">May 2025 - Present</p>
+                          <p className={`${inter} text-gray-700 text-sm leading-relaxed`}>
+                            Supporting strategic planning efforts. Oversees board
+                            documentation, records meeting minutes, and handles the
+                            signing of official documents.
+                          </p>
+                        </div>
+                        
+                        <div className="border-l-4 border-yellow-500 pl-4">
+                          <h4 className="text-lg font-semibold text-yellow-600 mb-2">Core Volunteer</h4>
+                          <p className="text-gray-700 text-sm mb-2">December 2022 - Present</p>
+                          <p className={`${inter} text-gray-700 text-sm leading-relaxed`}>
+                            Part of the main and core volunteer handling successful and free tech meetups
+                            and online sessions for everyone. Serving as committee lead for
+                            consecutive years of PyCon 2023 & 2024.
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -486,14 +514,14 @@ export default function Page() {
                 </div>
                 <h3 className="text-xl font-bold text-white">Programming</h3>
               </div>
-              <div className="space-y-3">
+              <div className="flex flex-wrap gap-2">
                 {["Python", "JavaScript", "TypeScript", "Java"].map((tech) => (
-                  <div key={tech} className="flex items-center justify-between">
-                    <span className="text-gray-300 font-mono">{tech}</span>
-                    <span className="px-2 py-1 bg-blue-900/30 border border-blue-600/30 text-blue-300 text-xs font-mono">
-                      Advanced
-                    </span>
-                  </div>
+                  <span
+                    key={tech}
+                    className="px-3 py-1 bg-blue-900/30 border border-blue-600/30 text-blue-300 text-sm font-mono"
+                  >
+                    {tech}
+                  </span>
                 ))}
               </div>
             </div>
@@ -506,14 +534,14 @@ export default function Page() {
                 </div>
                 <h3 className="text-xl font-bold text-white">Data & ML</h3>
               </div>
-              <div className="space-y-3">
-                {["Data Analytics", "Machine Learning", "Data Visualization", "Statistics"].map((tech) => (
-                  <div key={tech} className="flex items-center justify-between">
-                    <span className="text-gray-300 font-mono">{tech}</span>
-                    <span className="px-2 py-1 bg-green-900/30 border border-green-600/30 text-green-300 text-xs font-mono">
-                      Advanced
-                    </span>
-                  </div>
+              <div className="flex flex-wrap gap-2">
+                {["Data Analytics", "Data Preprocessing", "Machine Learning", "Data Visualization", "Statistics"].map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-3 py-1 bg-green-900/30 border border-green-600/30 text-green-300 text-sm font-mono"
+                  >
+                    {tech}
+                  </span>
                 ))}
               </div>
             </div>
@@ -526,14 +554,14 @@ export default function Page() {
                 </div>
                 <h3 className="text-xl font-bold text-white">Tools & DB</h3>
               </div>
-              <div className="space-y-3">
+              <div className="flex flex-wrap gap-2">
                 {["SQL", "Microsoft Excel", "TensorFlow", "Test Automation"].map((tech) => (
-                  <div key={tech} className="flex items-center justify-between">
-                    <span className="text-gray-300 font-mono">{tech}</span>
-                    <span className="px-2 py-1 bg-purple-900/30 border border-purple-600/30 text-purple-300 text-xs font-mono">
-                      Proficient
-                    </span>
-                  </div>
+                  <span
+                    key={tech}
+                    className="px-3 py-1 bg-purple-900/30 border border-purple-600/30 text-purple-300 text-sm font-mono"
+                  >
+                    {tech}
+                  </span>
                 ))}
               </div>
             </div>

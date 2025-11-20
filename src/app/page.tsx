@@ -1,5 +1,4 @@
 import { inter } from "@/utils/fonts";
-import { Linkedin, Github } from "lucide-react";
 import Image from "next/image";
 
 export default function Home() {
